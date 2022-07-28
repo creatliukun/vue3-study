@@ -1,20 +1,24 @@
-<script setup>
+<script>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue' // 导入组件后，不用注册了，就可以使用
+import { ref } from 'vue'
+let count = ref(0)
+const increment = (count) => {
+  console.log('increment点击',count)
+  // count++ 
+}
+
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+   {{count}}
   </div>
-  <HelloWorld msg="Vite + Vue" />
+   <button v-bind:disabled=truthy @click="increment(count)">按钮</button>
+  <HelloWorld msg="组件传递" />
 </template>
+
 
 <style scoped>
 .logo {

@@ -1,36 +1,22 @@
-<script setup>
-import { ref } from 'vue'
+<script>
+// 这种写法有点像react中的函数
+// setup script`语法糖提供了三个新的`API`来供我们使用：`defineProps`、`defineEmits`和`useContext
+// defineProps({ // 用来接收父组件传来的值props
+//   msg: String
+// }) 
+// defineEmits({}) //用来声明触发的事件表
+// useContext({}) //用来获取组件上下文context
 
-defineProps({
-  msg: String
-})
-
-const count = ref(0)
-</script>
+// const rawHtml =<div style="color: red">这是红色</div>
+</script>/
 
 <template>
   <h1>{{ msg }}</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+ <p>使用 v-html渲染原生组件: <span v-html="rawHtml"></span></p>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+
+
 </template>
 
 <style scoped>
