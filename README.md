@@ -1,6 +1,6 @@
 # Vue 3 + Vite
 
-### 通过 vite 脚手架安装
+## 通过 vite 脚手架安装
 
 ```js
 yarn create vite vue3-hello  --template vue
@@ -9,14 +9,14 @@ yarn
 yarn dev
 ```
 
-### 值得注意的新特性
+## 值得注意的新特性
 
-+  新增的属性
+###  新增的属性
 
   - emits 选项
   - Vue 3 现在正式支持了多根节点的组件，也就是片段，但是需要显式定义 attribute 应该分布在哪里
 
-+  删除的属性
+###  删除的属性
   - $children
   - $on，$off 和 $once 实例方法已被移除，组件实例不再实现事件触发接口
   - filters 过滤器移除了 vue3 中建议用 方法调用 或 计算属性实现，如果想实现全局过滤器，那么可以用全局属性来实现，也就是 globalProperties 上挂载一个$filters
@@ -39,10 +39,10 @@ yarn dev
   - Vue.extend 移除
   - config.ignoredElements 替换为 config.isCustomElement
   - Vue.prototype 替换为 config.globalProperties
-  
 
 
-+  非兼容的属性
+
+###  非兼容的属性
    - 函数式组件，建议只使用有状态的组件，函数式组件只能由接收 props 和 context (即：slots、attrs、emit) 的普通函数创建
    - 全局api
 
